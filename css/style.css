@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(280deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.menu_toggler {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    height: 28px;
+    width: 28px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
