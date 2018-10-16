@@ -32,5 +32,42 @@ body > * {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+}
+
+span,
+span::after,
+span::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2.5px;
+    background-color: #fafafa;
+    border-radius: 20px;
+    transition: 500ms cunix-bezier(.77, 0, .175, 1);    
+}
+
+span::before {
+    top: -8px;
+}
+
+span::after {
+    top: 8px;
+}
+
+.menu_toggler.active > span {
+    background-color: transparent;
+}
+
+.menu_toggler.active > span::after,
+.menu_toggler.active > span::before {
+    background-color: #005C9C;
+    top: 0;
+}
+
+.menu_toggler.active > span::before {
+    transform: rotate(-225deg);
+}
+
+.menu_toggler.active > span::after {
+    transform: rotate(225deg);
 }
