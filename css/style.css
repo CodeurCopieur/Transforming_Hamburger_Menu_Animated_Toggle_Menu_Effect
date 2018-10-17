@@ -43,7 +43,7 @@ span::before {
     height: 2.5px;
     background-color: #fafafa;
     border-radius: 20px;
-    transition: 500ms cunix-bezier(.77, 0, .175, 1);    
+    transition: 500ms cubic-bezier(.77, 0, .175, 1);    
 }
 
 span::before {
@@ -70,4 +70,31 @@ span::after {
 
 .menu_toggler.active > span::after {
     transform: rotate(225deg);
+}
+
+.menu {
+    position: absolute;
+    z-index: 998;
+    left: -30%;
+    background-color: #fff;
+    height: 100%;
+    width: 30%;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 300ms left cubic-bezier(.77, 0, .175, 1);
+}
+
+.menu.active {
+    left: 0%;
+}
+
+.menu a {
+    font-style: 1.4em;
+    margin-bottom: 1rem;
+    text-decoration: none;
+
+    color: #005c9c;
 }
